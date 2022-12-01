@@ -1,3 +1,3 @@
-# Discord JS Bot Template
+# Countdown Bot
 
-Template repository to create discord bots with discord.js
+Voice channel that counts down to certain time (it is hardcoded at the moment).

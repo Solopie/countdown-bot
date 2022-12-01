@@ -14,7 +14,8 @@ if (process.env.NODE_ENV === "dev") {
 }
 
 const CLIENT_ID = process.env.CLIENT_ID;
+const RUNTIME_CONFIG = { "TITLE_CHANNEL": null, "COUNTDOWN_CHANNEL": null, "INTERVAL_ID": null };
 
 module.exports = {
-    BOT_TOKEN, CLIENT_ID,
+    BOT_TOKEN, CLIENT_ID, RUNTIME_CONFIG
 };

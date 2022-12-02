@@ -5,7 +5,17 @@ const curTime = () => {
     const currentTime = moment();
     const diffTime = eventTime.valueOf() - currentTime.valueOf();
     const duration = moment.duration(diffTime, 'milliseconds');
-    const result = ('00' + duration.hours()).slice(-2) + ":" + ('00' + duration.minutes()).slice(-2);
+    let result = "";
+    if (duration.hours() >= 1) {
+        result = ('00' + duration.hours()).slice(-2) + " hours";
+    } else if (duration.hours() == 0) {
+        // Round down minutes
+        result = ('00' + ((duration.minutes() / 10) * 10)).slice(-2) + " minutes";
+    } else if (duration.minutes() < 10) {
+        result = "Less than 10 minutes remaining!"
+    } else {
+        result = "Event has started!"
+    }
     return result;
 }
 

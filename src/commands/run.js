@@ -11,7 +11,7 @@ module.exports = {
             return interaction.reply({ content: "Countdown has already started", ephemeral: true });
         }
 
-        config.RUNTIME_CONFIG["TITLE_CHANNEL"] = await interaction.guild.channels.create({ name: "CTF Countdown:", type: ChannelType.GuildVoice, permissionOverwrites: [{ id: interaction.client.application.id, allow: [PermissionsBitField.Flags.Connect] }, { id: interaction.guild.roles.everyone.id, deny: [PermissionsBitField.Flags.Connect] }] });
+        config.RUNTIME_CONFIG["TITLE_CHANNEL"] = await interaction.guild.channels.create({ name: "End of CTF:", type: ChannelType.GuildVoice, permissionOverwrites: [{ id: interaction.client.application.id, allow: [PermissionsBitField.Flags.Connect] }, { id: interaction.guild.roles.everyone.id, deny: [PermissionsBitField.Flags.Connect] }] });
         config.RUNTIME_CONFIG["COUNTDOWN_CHANNEL"] = await interaction.guild.channels.create({ name: countdown.curTime(), type: ChannelType.GuildVoice, permissionOverwrites: [{ id: interaction.client.application.id, allow: [PermissionsBitField.Flags.Connect] }, { id: interaction.guild.roles.everyone.id, deny: [PermissionsBitField.Flags.Connect] }] });
         config.RUNTIME_CONFIG["INTERVAL_ID"] = setInterval(async () => {
             const temp = countdown.curTime();

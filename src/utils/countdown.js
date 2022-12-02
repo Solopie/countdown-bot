@@ -1,7 +1,7 @@
 const moment = require('moment');
 
 const curTime = () => {
-    const eventTime = moment("2022-12-02 13:00+00:00"); // Start of HTB Event
+    const eventTime = moment("2022-12-04 13:00+00:00"); // Start of HTB Event
     const currentTime = moment();
     const diffTime = eventTime.valueOf() - currentTime.valueOf();
     const duration = moment.duration(diffTime, 'milliseconds');

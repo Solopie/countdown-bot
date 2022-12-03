@@ -1,11 +1,11 @@
 const moment = require('moment');
 
 const curTime = () => {
-    const eventTime = moment("2022-12-04 13:00+00:00"); // Start of HTB Event
+    const endTime = moment("2022-12-04 13:00+00:00"); // Start of HTB Event
     const currentTime = moment();
-    const diffTime = eventTime.valueOf() - currentTime.valueOf();
+    const diffTime = endTime.valueOf() - currentTime.valueOf();
 
-    if(diffTime < 0) {
+    if (diffTime < 0) {
         result = "Event has ended!";
         return result;
     }
